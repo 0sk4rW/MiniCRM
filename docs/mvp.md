@@ -15,7 +15,7 @@ Po konsultacji z klientem wprowadza on do systemu niezbędne dane.
 -Tworzenie zlecenia
 -Zmiana statusu zlecenia
 -Wyświetlanie listy zleceń
-
+-Przypisywanie usług do zleceń
 
 # Planowane funkcje w późniejszym etapie tworzenia projektu:
 
@@ -38,7 +38,7 @@ Klient:
 -imię
 -nazwisko
 -numer telefonu
--adres e-mail
+-adres e-mail (opcjonalny)
 -notatka
 
 Samochód:
@@ -71,3 +71,11 @@ Usługa:
 -numerów faktur
 -kosztów materiałów
 -harmonogramu pracowników
+
+# Relacje biznesowe
+
+-Jeden klient może posiadać wiele samochodów.
+-Jeden samochód może posiadać wiele zleceń.
+-Jedno zlecenie może zawierać wiele usług.
+-Jedna usługa może występować w wielu zleceniach.
+
