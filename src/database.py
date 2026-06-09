@@ -1,3 +1,4 @@
+# uruchomienie programu w terminalu: python src/database.py
 
 import sqlite3
 
@@ -20,6 +21,19 @@ CREATE TABLE IF NOT EXISTS clients
 """
 
 cursor.execute(create_clients_table)
+
+show_tables_query = """ 
+
+SELECT name
+FROM sqlite_master
+WHERE type='table';
+
+"""
+cursor.execute(show_tables_query)
+
+result = cursor.fetchall()
+
+print(result)
 
 connection.commit()
 
