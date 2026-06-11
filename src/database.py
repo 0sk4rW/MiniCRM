@@ -26,14 +26,16 @@ show_tables_query = """
 
 SELECT name
 FROM sqlite_master
-WHERE type='table';
+WHERE name='abc123';
 
 """
 cursor.execute(show_tables_query)
 
-result = cursor.fetchall()
-
-print(result)
+result = cursor.fetchone()
+if result is None:
+    print("Nie znaleziono wyniku")
+else:
+    print(result[0])
 
 connection.commit()
 
